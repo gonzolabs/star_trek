@@ -35,19 +35,14 @@ def solve():
 			# let's start by testing the game-only conditions
 			if not all([
 				# 1. Geordi ranks 2 at Tri-D Chess
-				# crew['G'].tri == 2,
 				tri_list.index('G') == 1,
 				# 2. Picard ranks two positions behind Troi at Fizzbin
-				# crew['T'].fizz - crew['P'].fizz == 2,
 				fizz_list.index('T') - fizz_list.index('P') == 2,
 				# 8. The person who is worst at Fizzbin is better than Troi at Tri-D Chess
-				# crew[fizz_list[0]].tri > crew['T'].tri,
 				tri_list.index(fizz_list[0]) > tri_list.index('T'),
 				# 9. The person ranked number 3 at Tri-D Chess is ranked 4 positions higher than Data at Fizzbin
-				# crew[tri_list[2]].fizz - crew['D'].fizz == 4,
 				fizz_list.index(tri_list[2]) - fizz_list.index('D') == 4,
 				# 11. Riker is ranked 2 lower at Tri-D Chess than the crew member ranked 2 at Fizzbin
-				# crew[fizz_list[1]].tri - crew['R'].tri == 2
 				tri_list.index(fizz_list[1]) - tri_list.index('R') == 2
 				]):
 				continue
